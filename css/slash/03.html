@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    body {
+      background: #eee;
+    }
+
+    div {
+      position: relative;
+      margin: 50px auto;
+      width: 100px;
+      height: 100px;
+      box-sizing: border-box;
+      border: 1px solid #333;
+      background: #fff;
+      line-height: 120px;
+      text-indent: 5px;
+    }
+
+    div::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 0;
+      height: 0;
+      border: 49px solid transparent;
+      border-left: 49px solid deeppink;
+      border-bottom: 49px solid deeppink;
+      animation: slash 6s infinite ease;
+    }
+
+    div::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 0;
+      height: 0;
+      border: 48px solid transparent;
+      border-left: 48px solid #fff;
+      border-bottom: 48px solid #fff;
+      animation: slash2 6s infinite ease;
+    }
+
+    @keyframes slash {
+      0% {
+        transform: translate(-50px);
+      }
+      30% {
+        transform: translate(0px);
+      }
+      100% {
+        transform: translate(0px);
+      }
+    }
+
+    @keyframes slash2 {
+      0% {
+        transform: translate(-100px);
+      }
+      30% {
+        transform: translate(-100px);
+      }
+      60% {
+        transform: translate(0px);
+      }
+      100% {
+        transform: translate(0px);
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div></div>
+</body>
+
+</html>

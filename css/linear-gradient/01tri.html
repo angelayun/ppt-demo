@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>用linear-gradient来实现三角</title>
+  <style>
+    .talk {
+      display: inline-block;
+      max-width: 80%;
+      border: 1px solid #ddd;
+      border-radius: 3px;
+      padding: 6px 10px;
+      font-size: 14px;
+      background-color: #fff;
+      position: relative;
+    }
+
+    .talk::before {
+      content: '';
+      position: absolute;
+      width: 6px;
+      height: 6px;
+      background: linear-gradient(to top, #ddd, #ddd) no-repeat, linear-gradient(to right, #ddd, #ddd) no-repeat, linear-gradient(135deg, #fff, #fff 6px, hsla(0, 0%, 100%, 0) 6px) no-repeat;
+      background-size: 6px 1px, 1px 6px, 6px 6px;
+      transform: rotate(-45deg);
+      left: -4px;
+      top: 13px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="talk">这是对话内容</div>
+</body>
+
+</html>

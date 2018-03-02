@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    div {
+      position: relative;
+      width: 200px;
+      height: 60px;
+      background: #ddd;
+
+      height: 50px;
+      outline: 5px solid deeppink;
+
+    }
+
+    div::after {
+      position: absolute;
+      content: "";
+      top: -5px;
+      bottom: -5px;
+      right: -5px;
+      left: 0;
+      background: #ddd;
+    }
+  </style>
+</head>
+
+<body>
+  <div></div>
+</body>
+
+</html>
