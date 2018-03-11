@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>借助额外元素</title>
+  <style>
+    .container {
+      width: 100vw;
+      height: 100vh;
+    }
+
+    .floater {
+      height: 50%;
+      margin-bottom: -100px;
+    }
+
+    .floater_center {
+      height: 200px;
+      width: 200px;
+      margin: auto;
+    }
+  </style>
+</head>
+<!-- 元素高度已知，在center元素外插入一个额外元素floater，设置floater的height为50%；margin-bottom为center元素高度的一半(height + padding) / 2。 -->
+
+<body>
+  <div class="container">
+    <div class="floater"></div>
+    <div class="center floater_center">
+      人和社会，一切斗争的总结局也许都是中庸而已。
+      <br> 与其认真，不如随便，采菊东篱下，悠然见南山。有钱就寻一醉，无钱就寻一睡，与过无争，随遇而安。
+    </div>
+  </div>
+</body>
+
+</html>

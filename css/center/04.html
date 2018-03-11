@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>忽略--主要是兼容ie6、7</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+    }
+
+    .parent {
+      /* font-size的值为这个元素的高度除以1.14得到的结果，这里就是200/1/14=175.4 */
+      *font-size: 175.4px;
+      display: table-cell;
+      vertical-align: middle;
+      height: 200px;
+      width: 200px;
+      border: 1px solid red;
+      text-align: center;
+    }
+
+    .child {
+      display: inline-block;
+      *vertical-align: middle;
+      *zoom: 1;
+      *display: inline;
+      font-size: 12px;
+      width: 50px;
+      height: 50px;
+      background: #000;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="parent">
+    <div class="child"></div>
+  </div>
+</body>
+
+</html>

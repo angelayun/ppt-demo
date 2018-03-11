@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>基于ex单位的天然垂直居中对齐效果实例页面</title>
+  <style>
+    .icon-arrow {
+      display: inline-block;
+      width: 20px;
+      height: 1ex;
+      background: url(../images/arrow.png) no-repeat center;
+    }
+  </style>
+</head>
+
+<body>
+  <div id='divTest1'>
+    zhongankeji
+    <i class="icon-arrow"></i>
+  </div>
+  <br>
+  <div id='divTest2'>
+    众安科技
+    <i class="icon-arrow"></i>
+  </div>
+  <br> 修改字体和大小
+  <select id="selFontFamily">
+    <option value="simsun">宋体</option>
+    <option value="microsoft yahei">微软雅黑</option>
+    <option value="Arial">Arial</option>
+    <option value="Tamoha">Tamoha</option>
+    <option value="Consolas">Consolas</option>
+  </select>
+  <select id="selFontSize">
+    <option value="14px">14px</option>
+    <option value="18px">18px</option>
+    <option value="24px">24px</option>
+    <option value="30px">30px</option>
+  </select>
+</body>
+<script>
+
+  var ff = document.getElementById('selFontFamily'),
+    fs = document.getElementById('selFontSize');
+
+  var div1 = document.getElementById('divTest1'),
+    div2 = document.getElementById('divTest2');
+
+  if (ff && fs && div1 && div2) {
+    ff.onchange = function () {
+      div1.style.fontFamily = this.value.replace('/', ',');
+      div2.style.fontFamily = this.value.replace('/', ',');
+    };
+    fs.onchange = function () {
+      div1.style.fontSize = this.value;
+      div2.style.fontSize = this.value;
+    };
+  }
+
+</script>
+
+</html>

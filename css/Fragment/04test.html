@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    ::selection {
+      background: aquamarine;
+      color: black;
+    }
+
+    .custom-text-selection::selection {
+      background: deeppink;
+      color: white;
+    }
+
+    .unselectable {
+      user-select: none;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- 伪类的效果可以通过添加一个实际的类来达到，而伪元素的效果则需要通过添加一个实际的元素才能达到，这也是为什么他们一个称为伪类，一个称为伪元素的原因。 -->
+  <!-- 所以我不知道为什么是::selection而不是:selection -->
+  <p class="custom-text-selection">Select some of this text.</p>
+
+
+  <p>You can select me.</p>
+  <p class="unselectable">You can't select me!</p>
+</body>
+
+</html>

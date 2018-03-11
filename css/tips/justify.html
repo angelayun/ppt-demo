@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    .box {
+      width: 256px;
+      height: 256px;
+      border-bottom: 1px dashed #ccc;
+      text-align: justify;
+    }
+
+    .box:before {
+      content: "";
+      display: inline-block;
+      height: 100%;
+    }
+
+    .box:after {
+      content: "";
+      display: inline-block;
+      width: 100%;
+      vertical-align: bottom;
+    }
+
+    .bar {
+      display: inline-block;
+      width: 20px;
+      height: 0;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div id="box" class="box">
+    <!-- 就是不能留下空白 -->
+    <i class="bar"></i>
+    <i class="bar"></i>
+    <i class="bar"></i>
+    <i class="bar"></i>
+  </div>
+</body>
+
+</html>

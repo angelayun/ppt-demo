@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    .pic {
+      width: 100px;
+      height: 100px;
+      margin: 50px auto;
+      cursor: pointer;
+      transition: .5s all ease-out;
+    }
+
+    .pic1 {
+      background-image: url(../images/04.png), linear-gradient(#f09, #09f, #f0f);
+      background-blend-mode: lighten;
+      background-size: cover;
+      background-position: 0 0, 0 120px;
+      background-repeat: no-repeat;
+    }
+
+    .pic1:hover {
+      background-position: 0 0, 0 0;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="pic pic1"></div>
+</body>
+
+</html>

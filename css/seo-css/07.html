@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>伪元素</title>
+  <!-- 使用before伪元素，content设置为图片的URL，在h1元素上设置溢出隐藏 -->
+</head>
+
+<body>
+  <style>
+    h1 {
+      width: 64px;
+      height: 64px;
+      overflow: hidden;
+      font: 12px/1 '微软雅黑';
+    }
+
+    h1:before {
+      content: url(../images/icon_64.ico);
+      display: block;
+    }
+  </style>
+  <h1>众安科技</h1>
+</body>
+
+</html>

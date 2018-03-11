@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>上padding</title>
+</head>
+<!-- 文本是显示在content-box区域中。所以，将height设置为0,用padding-top来替代height，并设置overflow:hidden。则可以只显示背景不显示文本 -->
+
+<body>
+  <style>
+    h1 {
+      width: 64px;
+      padding-top: 64px;
+      height: 0;
+      overflow: hidden;
+      background: url(../images/icon_64.ico);
+      font: 12px/1 '微软雅黑';
+    }
+  </style>
+  <h1>众安科技</h1>
+</body>
+
+</html>

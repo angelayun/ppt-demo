@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>inline-block方式</title>
+  <style>
+    .container {
+      display: block;
+      width: 100vw;
+      height: 100vh;
+      text-align: center;
+    }
+
+    /*inline-block的前世今生*/
+
+    .container:after {
+      content: '';
+      display: inline-block;
+      vertical-align: middle;
+      height: 100%;
+    }
+
+    .inline_block {
+      display: inline-block;
+      vertical-align: middle;
+      text-align: left;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="center inline_block">
+      生命里有着多少的无奈和惋惜,又有着怎样的愁苦和感伤?
+      <br> 雨浸风蚀的落寞与苍楚一定是水,静静地流过青春奋斗的日子和触摸理想的岁月。
+    </div>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    .pic {
+      width: 200px;
+      height: 200px;
+      background-image: url(../images/single.png);
+      background-size: cover;
+    }
+
+    .pic1 {
+      background-image: url(../images/single.png), linear-gradient(#f00, #f00);
+      /* 叠加了一层渐变层 linear-gradient(#f00, #f00) ，实现了一个纯红色背景，而不是直接使用 #f00 实现红色背景。 */
+      background-blend-mode: lighten;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="pic"></div>
+  <div class="pic pic1"></div>
+</body>
+
+</html>

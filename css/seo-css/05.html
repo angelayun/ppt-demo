@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>0宽高</title>
+  <!-- 通过新增一个span标签来保存文本内容，并将该标签的宽高设置为0，再设置溢出隐藏即可 -->
+</head>
+
+<body>
+  <style>
+    h1 {
+      width: 64px;
+      height: 64px;
+      background: url(../images/icon_64.ico);
+      font: 12px/1 '微软雅黑';
+    }
+
+    span {
+      display: block;
+      width: 0;
+      height: 0;
+      overflow: hidden;
+    }
+  </style>
+  <h1>
+    <span>众安科技</span>
+  </h1>
+</body>
+
+</html>

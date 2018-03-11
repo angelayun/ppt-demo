@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>负margin</title>
+</head>
+<!-- 通过使用margin-left:-2000px，使盒模型向左偏移2000px，然后将宽度设置为2064px，从而页面中只显示2064px中64px的部分。将图片的背景设置为右对齐，且不重复 -->
+
+<body>
+  <style>
+    h1 {
+      width: 2064px;
+      height: 64px;
+      background: url(../images/icon_64.ico) right no-repeat;
+      font: 12px/1 '微软雅黑';
+      margin-left: -2000px;
+    }
+  </style>
+  <h1>众安科技</h1>
+</body>
+
+</html>
