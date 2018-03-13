@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>text-indent和writing-mode的共同作用</title>
+  <style>
+    a,
+    a:active,
+    a:hover {
+      text-decoration: none;
+    }
+
+    .btn {
+      display: inline-block;
+      color: #a78252;
+      background-color: #ddc390;
+      width: 85px;
+      height: 85px;
+      line-height: 85px;
+      border: 6px solid #ddc390;
+      border-radius: 50%;
+      box-shadow: inset 0 0 0 1px #d6b681, 0 1px, 0 2px, 0 3px, 0 4px;
+      text-align: center;
+      -webkit-transition: border-color .25s, background-color .25s;
+      transition: border-color .25s, background-color .25s;
+      font-size: 42px;
+      cursor: pointer;
+    }
+
+    .btn:active {
+      text-indent: 2px;
+    }
+
+    .verticle-mode {
+      writing-mode: tb-rl;
+      -webkit-writing-mode: vertical-rl;
+      writing-mode: vertical-rl;
+    }
+  </style>
+</head>
+
+<body>
+  <a href="javascript:" class="btn verticle-mode">领</a>
+</body>
+
+</html>

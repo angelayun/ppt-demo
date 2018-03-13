@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    @font-face {
+      font-family: Arrow;
+      src: url("../images/arrow.eot?");
+      src: local("Any"),
+      url("../images/arrow.woff") format("woff"),
+      url("../images/arrow.ttf");
+      font-weight: normal;
+      font-style: normal;
+    }
+
+    .icon-play {
+      font-family: Arrow;
+    }
+
+    .verticle-mode {
+      writing-mode: tb-rl;
+      -webkit-writing-mode: vertical-rl;
+      writing-mode: vertical-rl;
+    }
+  </style>
+</head>
+
+<body>
+  <p>
+    <strong>默认流</strong>
+  </p>
+  <span class="icon-play">r</span> 箭头朝右
+
+  <p>
+    <strong>垂直流</strong>
+  </p>
+  <span class="icon-play verticle-mode">r</span> 箭头朝下
+</body>
+
+</html>
