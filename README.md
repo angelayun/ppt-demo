@@ -9,12 +9,17 @@
 6. [content的妙用实现tooltip效果](http://192.168.24.22:8081/css/tips/titlehover.html)
 7. [content实现代码显示行号效果](http://192.168.24.22:8081/css/tips/showcode.html)
 8. [在页面上实时编辑并显示样式](http://192.168.24.22:8081/css/tips/justintime.html)
+9. [text-indent实现按键动态效果](http://localhost:8081/css/world/09text-indent.html)
+10. [改变默认文档流实现改变图标方向](http://localhost:8081/css/world/10writing-mode-icon.html)
+11. [outline的妙用](http://localhost:8081/css/world/11outline.html)
+12. [text-align的妙用](http://localhost:8081/css/world/12text-align.html)
 ### 伪类的一些妙用
 1. [使用:target来实现tab标签切换](http://192.168.24.22:8081/css/pseudo/01.html)
 2. [使用:checked来实现tab标签切换](http://192.168.24.22:8081/css/pseudo/02.html)
 3. [使用:checked来自定义复选框样式](http://192.168.24.22:8081/css/pseudo/03.html)
 4. [使用:valid来实现input框删除icon](http://192.168.24.22:8081/css/world/05margin-valid.html)
 5. [使用透明边框实现等高布局](http://192.168.24.22:8081/css/world/06equal-height.html)
+6
 ### 用css实现的一些loading效果
 1. [文字...](http://192.168.24.22:8081/css/world/02loading.html)
 2. [小圆点loading](http://192.168.24.22:8081/css/fragment/01loading.html)
@@ -29,7 +34,6 @@
 2. [使用线性渐变来画加/减号图标](http://192.168.24.22:8081/css/linear-gradient/02plus.html)
 3. [使用线线渐变实现代码的斑马条纹背景](http://192.168.24.22:8081/css/linear-gradient/03zebra-lines.html)
 4. [给文本渐变背景](http://192.168.24.22:8081/css/fragment/06text.html)
-
 ### 纯css实现波浪效果
 1. [方式一](http://192.168.24.22:8081/css/wave/01.html)
 2. [方式二](http://192.168.24.22:8081/css/wave/02.html)
@@ -49,11 +53,9 @@
 -  实例2：[实例2](http://192.168.24.22:8081/css/changeColor/04.html)
 4. [背景图片叠加](http://192.168.24.22:8081/css/changeColor/03.html)   变亮模式
 5. [文本背景为图片](http://192.168.24.22:8081/css/changeColor/06.html)
-6. 
-
 ## 脑动题
 ### SEO 以图换字的方式有哪些？
-1. [方式一](http://192.168.24.22:8081/css/seo-css/01.html)
+1. [方式一](./css/seo-css/01.html)
 2. [方式二](http://192.168.24.22:8081/css/seo-css/02.html)
 3. [方式三](http://192.168.24.22:8081/css/seo-css/03.html)
 4. [方式四](http://192.168.24.22:8081/css/seo-css/04.html)
