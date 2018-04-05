@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>去掉了display:table</title>
+    <style type="text/css">
+        /* 去掉了display:table之后需要加上如下一段 */
+
+        .layout__main {
+            width: 3000px;
+            /* 只能用具体的长度设置，不能用百分比 */
+        }
+
+        .layout__aside {
+            width: 200px;
+            min-width: 200px;
+            /* 给侧边栏设置一个最小宽度，免得主体内容栏把侧边栏的宽度给挤掉了 */
+        }
+        /* td默认的宽度就是可自动调整的，即使宽度设置的很大，也不会撑破table的宽度 */
+
+
+
+
+        .layout__col {
+            text-align: center;
+            display: table-cell;
+        }
+
+        .layout__col+.layout__col {
+            border-left: 10px solid #fff;
+        }
+
+        .layout__main {
+            background-color: #4DBCB0;
+        }
+
+        .layout__aside {
+            background-color: #daf1ef;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="layout">
+        <aside class="layout__col layout__aside layout__aside--left">左侧边栏宽度固定</aside>
+        <div class="layout__col layout__main">内容栏宽度自适应<br>高度增加一点，旁边的高度都会自动增加</div>
+        <aside class="layout__col layout__aside layout__aside--right">右侧边栏宽度固定</aside>
+    </div>
+</body>
+
+</html>

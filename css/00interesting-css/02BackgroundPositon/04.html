@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>背景图距离容器底下角定位--</title>
+    <style>
+        /* 公共样式 */
+
+        div {
+            max-width: 10em;
+            min-height: 5em;
+            padding: 10px;
+            color: white;
+            font: 100%/1 sans-serif;
+        }
+
+        div {
+            padding: 10px 20px;
+            background: url(../images/code-pirate.svg) no-repeat #58a bottom right;
+            /* 或 100% 100% */
+            background-origin: content-box;
+        }
+    </style>
+</head>
+
+<body>
+    <div>Code Pirate</div>
+</body>
+
+</html>

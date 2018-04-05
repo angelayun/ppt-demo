@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style type="text/css">
+        .layout {
+            display: flex;
+        }
+
+        .layout__main {
+            flex: 1;
+        }
+
+        .layout__aside {
+            width: 200px;
+        }
+
+        .layout>.layout__aside:not(:first-child),
+        .layout>.layout__main:not(:first-child) {
+            margin-left: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="layout">
+        <aside class="layout__aside">侧边栏宽度固定</aside>
+        <div class="layout__main">主内容栏宽度自适应</div>
+    </div>
+    <div class="layout">
+        <div class="layout__main">主内容栏宽度自适应</div>
+        <aside class="layout__aside">侧边栏宽度固定</aside>
+    </div>
+    <div class="layout">
+        <aside class="layout__aside">左侧边栏宽度固定</aside>
+        <div class="layout__main">主内容栏宽度自适应</div>
+        <aside class="layout__aside">右侧边栏宽度固定</aside>
+    </div>
+    <div class="layout">
+        <aside class="layout__aside">第1个侧边栏宽度固定</aside>
+        <aside class="layout__aside">第2个侧边栏宽度固定</aside>
+        <div class="layout__main">主内容栏宽度自适应</div>
+    </div>
+    <div class="layout">
+        <div class="layout__main">主内容栏宽度自适应</div>
+        <aside class="layout__aside">第1个侧边栏宽度固定</aside>
+        <aside class="layout__aside">第2个侧边栏宽度固定</aside>
+    </div>
+</body>
+
+</html>

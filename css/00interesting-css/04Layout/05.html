@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>3栏布局，2个侧边栏同时固定在左边，右边是主体内容栏</title>
+    <style type="text/css">
+        .layout:after {
+            clear: both;
+            content: " ";
+            display: table;
+        }
+
+        .layout__aside,
+        .layout__main {
+            float: left;
+        }
+
+        .layout {
+            padding-left: 420px;
+        }
+
+        .layout__main {
+            width: 100%;
+        }
+
+        .layout__aside {
+            width: 200px;
+        }
+
+        .layout__aside--first {
+            margin-left: -420px;
+        }
+
+        .layout__aside--second {
+            margin-left: -210px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="layout">
+        <aside class="layout__aside layout__aside--first">第1个侧边栏宽度固定</aside>
+        <aside class="layout__aside layout__aside--second">第2个侧边栏宽度固定</aside>
+        <div class="layout__main">主内容栏宽度自适应</div>
+    </div>
+</body>
+
+</html>

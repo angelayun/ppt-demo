@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>背景图距离容器底下角定位--border transparent法</title>
+    <style>
+        /* 公共样式 */
+
+        div {
+            max-width: 10em;
+            min-height: 5em;
+            padding: 10px;
+            color: white;
+            font: 100%/1 sans-serif;
+        }
+
+        div {
+            background: url(../images/code-pirate.svg) no-repeat 100% 100% #58a;
+            /* background-position: 100% 100%; */
+            border-right: 20px solid transparent;
+            border-bottom: 10px solid transparent;
+        }
+    </style>
+</head>
+
+<body>
+    <div>Code Pirate</div>
+</body>
+
+</html>

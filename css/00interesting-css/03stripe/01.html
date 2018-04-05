@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        /* 通用样式 */
+
+        div {
+            position: relative;
+            width: 180px;
+            height: 180px;
+        }
+
+        div {
+            background: #9c27b0;
+            border: 20px dashed #2196f3;
+        }
+
+        div::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            background: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- background-color 是从元素的边框左上角起到右下角止，
+        而 background-image 却不一样，他是从 padding 边缘的左上角起而到 border 的右下角边缘止 -->
+    <div></div>
+</body>
+
+</html>

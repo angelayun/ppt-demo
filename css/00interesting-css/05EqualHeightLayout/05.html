@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>侧边栏绝对定位，主体内容栏保持流式布局</title>
+    <style type="text/css">
+        .layout {
+            position: relative;
+        }
+
+        .layout__aside {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+        }
+
+        .layout__main {
+            margin: 0 210px;
+        }
+
+        .layout__aside {
+            width: 200px;
+        }
+
+        .layout__aside--left {
+            left: 0;
+        }
+
+        .layout__aside--right {
+            right: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="layout">
+        <aside class="layout__aside layout__aside--left">左侧边栏宽度固定</aside>
+        <div class="layout__main">内容栏宽度自适应<br>高度增加一点，旁边的高度都会自动增加</div>
+        <aside class="layout__aside layout__aside--right">右侧边栏宽度固定</aside>
+    </div>
+</body>
+
+</html>

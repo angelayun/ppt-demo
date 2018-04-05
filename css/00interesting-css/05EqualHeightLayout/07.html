@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>利用边框重叠</title>
+    <style type="text/css">
+        .layout:after {
+            content: " ";
+            clear: both;
+            display: table;
+        }
+
+        .layout__aside,
+        .layout__main {
+            float: left;
+        }
+
+        .layout {
+            padding-left: 201px;
+        }
+
+        .layout__main {
+            width: 100%;
+            margin-left: -1px;
+            border-left: 1px solid #ccc;
+        }
+
+        .layout__aside {
+            width: 200px;
+            border-right: 1px solid #ccc;
+            margin-left: -201px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="layout">
+        <aside class="layout__aside">侧边栏宽度固定</aside>
+        <div class="layout__main">内容栏宽度自适应<br>高度增加一点，旁边的高度看起来都跟内容栏高度一样</div>
+    </div>
+</body>
+
+</html>
