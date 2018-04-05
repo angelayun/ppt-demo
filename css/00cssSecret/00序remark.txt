@@ -1,0 +1,57 @@
+1、在增强网页设计效果时，应该使用生成性内容，而不是依赖冗余的标签和图片。
+2、要把表单元素的字体设定为与页面的其他部分相同，你并不需要重复指定字体属性，只需利用 inherit 的特性即可
+3、利用 CSS 自身的机制来组织回退样式，而不是依赖 CSS hack 来实现
+    eg:正确的代码组织方式应该是先写 “回退样式”，再写 “理想样式”
+    background: #000;
+    background: rgba(0,0,0,0.75);
+4、DRY(Don't repeat yourself )
+5、理解发现解决方案的过程比解决方案本身更重要
+6、浏览器可以解析某个css特性并不代表它已经实现或正确实现了这个特性
+7、浏览器前缀：-ms-border-radius 和 -o-borderradius 这两个属性从来没有在任何浏览器中出现过；因为 IE 和 Opera 从一
+开始就是直接实现 border-radius 这个无前缀版本的
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+8、尽量减少重复，也就是说尽量减少改动时需要编辑的点
+    a)当某些值相互依赖时，应该把它们的相互关系用代码表达出来
+        font-size: 20px;
+        line-height: 1.5;
+    b)比方说制作一个按钮时把padding、margin、border-radius、text-shadow、box-shadow等设置为em单位
+      相对于font-size而言的
+    c)颜色尽量写成hsla而非rgba;因为它的字符长度更短，主要是重复度更低
+      background: #58a linear-gradient(hsla(0,0%,100%,.2),transparent)
+      上面这句背景有渐变阴影  如果我要重新使用一个颜色的话，就直接background-color: #c00;
+9、代码易维护和代码量少不可兼得
+    eg:border-width: 10px 10px 10px 0; 如果为了易维护的话，可能border-width: 10px;border-left-width: 0;这样会更好一些
+10、currentColor是css中有史以来的第一个变量
+    a)假设我们想让所有水平分割线与文本的颜色保持一致hr {background: currentColor;}
+    b)没有给边框指定颜色， 它就会自动地从文本颜色那里得到颜色。 这是因为 currentColor 本身就是很多 CSS 颜色属性的初始值， 比如border-color 和 outline-color， 以及 text-shadow 和 box-shadow 的颜色值
+11、合理利用继承
+    a)要把表单元素的字体设定为与页面的其他部分相同， 你并不需要重复指定字体属性， 只需利用 inherit 的特性即可  eg:  input, select, button { font: inherit; }
+    b)要把超链接的颜色设定为与页面中其他文本相同同样可以用inherit eg:  a { color: inherit; }
+    c)比方说创建提示框时，希望提示框的小箭头能自动继承背景和边框的样式
+12、每个媒体查询都会增加成本，你添加的媒体查询越多，你的css代码就会变得越来越经不起折腾，只有用对了才可能是利器
+13、实现弹性可伸缩的布局， 并在媒体查询的各个断点区间内指定相应的尺寸（如果你发现自己需要一大堆媒体查询才能让设计适应大大小小的屏幕，那么不妨后退一步， 重新审视你的代码结构。 因为在所有的情况下， 响应式都不是唯一需要考虑的问题）
+14、合理使用简写
+    a)CSS 工作组可能会在未来引入更多的展开式属性,合理使用简写是一种良好的防卫性编码方式， 可以抵御未来的风险。 
+    b)如果我们要明确地去覆盖某个具体的展开式属性并保留其他相关样式， 那就需要用展开式属性
+    c)列表扩散规则：如果我们要明确地去覆盖某个具体的展开式属性并保留其他相关样式， 那就需要用展开式属性 
+        eg:比方说如下代码
+            background: url(tr.png) no-repeat top right / 2em 2em,
+                        url(br.png) no-repeat bottom right / 2em 2em,
+                        url(bl.png) no-repeat bottom left / 2em 2em;
+            就可以简写成：
+            background: url(tr.png) top right,
+                        url(br.png) bottom right,
+                        url(bl.png) bottom left;
+            background-size: 2em 2em;
+            background-repeat: no-repeat;
+15、养成随手查阅语法的好习惯
+16、原生特性通常比预处理器提供的版本要强大得多
+    a)eg:预处理器完全不知道如何完成 100% - 50px 这样的计算， 因为在页面真正被渲染之前， 百分比值是无法解析的。 但是， 原生CSS 的 calc() 在计算这样的表达式时没有任何压力
+    b)再看看css变量 eg:以下代码在有序列表中， 列表项的背景色将是rebeccapurple； 但在无序列表中， 列表项的背景色将是 purple。 试试用预处理器能否做到
+        ul { --accent-color: purple; }
+        ol { --accent-color: rebeccapurple; }
+        li { background: var(--accent-color); }

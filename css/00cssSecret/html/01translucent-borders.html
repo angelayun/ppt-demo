@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>实现半透明边框 </title>
+    <style>
+        body {
+            background-image: url('./images/stone-art.jpg')
+        }
+
+        div {
+            max-width: 20em;
+            padding: 2em;
+            margin: 2em auto 0;
+            font: 100%/1.5 sans-serif;
+            /* 通过border设置a通道 然后background-clip: padding-box */
+            background-color: #fff;
+            border: 10px solid hsla(0, 0%, 100%, .5);
+            background-clip: padding-box
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        Can I haz semi-transparent borders? Pretty please?
+    </div>
+</body>
+
+</html>
